@@ -1,0 +1,49 @@
+---
+title: "Lectures on ML Systems"
+author:
+    name: Pankaj Pansari
+    affiliation: Plaksha University
+    url: https://pankajpansari.github.io/about.html
+---
+
+This page serves as a reference for understanding Machine Learning Systems (ML Systems). The material consists of video lectures, slides, and additional reading material. 
+
+### Description
+
+Machine learning models are pervasively used to solve problems in varied fields such as vision, robotics, NLP, and scientific discovery. The increased capabilities of these models has corresponded with increase in their size and compute requirements. Besides, use of these models in real-world applications demands strict requirements on performance parameters, such as latency, throughput, and hardware usage efficiency. 
+
+The focus of this course is on exploring these systems-related challenges during training and serving of large language models (LLMs) with special emphasis on Transformer architecture. Topics include GPU architecture and hardware-aware algorithms, ML frameworks and compilers, techniques to parallelize LLMs over multiple GPUs, and reduction of computational complexity and memory footprint.
+
+**Textbook**: The following book can be helpful for parts of the course:
+
+[How to Scale Your Model](https://jax-ml.github.io/scaling-book/) by Austin, J., Douglas, S., Frostig, R., Levskaya, A., Chen, C., Vikram, S., Lebron, F., Choy, P., Ramasesh, V., Webson, A., & Pope, R. (2025).  
+
+**Credits**: Part of the content in the lectures is based on material from [csci 1390 at Brown](https://cs.brown.edu/courses/csci1390/), created by Deepti Raghavan, [cs229s at Stanford](https://cs229s.stanford.edu/fall2023/), created by Simran Arora and Azalia Mirhoseini, and [cs 15-442 at CMU](https://catalyst.cs.cmu.edu/15-884-mlsys-sp21/), by Tianqi Chen.  
+
+**Disclaimer**: This being the first offering of this class, please anticipate technical difficulties. This is not an official course webpage from Plaksha University; this is maintained personally by instructor.
+
+**Feedback**: If you have found the material useful, or have suggestions on how it can be improved, I will be happy to hear from you. Please email me at pankaj.pansari@plaksha.edu.in 
+
+<hr style="border: 3px solid black;">
+
+### Lectures
+
+**Lecture 1: Introduction**
+
+[Slides](https://drive.google.com/file/d/15XROZ6VQ4ZsiYpsDWv1jxMSEGCD6J6x9/view?usp=sharing), [Video lecture](https://youtu.be/BQgaIufinwc)
+
+Suggested Reading:
+
+1. Gholami, Amir, et al. "AI and Memory Wall." IEEE Micro Journal ([arxiv link](https://arxiv.org/abs/2403.14123)) 
+2. Kaplan, Jared, et al. "Scaling laws for neural language models." arXiv:2001.08361 (2020) ([arxiv link](https://arxiv.org/abs/2001.08361))
+3. Jacob, Austin, et al. [How to Scale Your Model](https://jax-ml.github.io/scaling-book/) (Part 0: Intro)
+
+**Lecture 2: Automatic Differentiation**
+
+[Slides](https://drive.google.com/file/d/15XROZ6VQ4ZsiYpsDWv1jxMSEGCD6J6x9/view?usp=drive_link), [Video lecture](https://youtu.be/R8tktoCW1VI)
+
+Suggested Reading:
+
+1. Kevin Clark, "Computing Neural Network Gradients" ([link](https://web.stanford.edu/class/cs224n/readings/gradient-notes.pdf)) 
+2. Roger Grosse, "CSC321 Lecture 10: Automatic Differentiation" ([Slides](https://www.cs.toronto.edu/~rgrosse/courses/csc321_2018/slides/lec10.pdf))
+3. Chen, Tianqi, et al. "Training Deep Nets with Sublinear Memory Cost" ([arxiv link](https://arxiv.org/abs/1604.06174))
