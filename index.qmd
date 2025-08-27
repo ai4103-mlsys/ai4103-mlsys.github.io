@@ -40,7 +40,7 @@ Suggested Reading:
 
 **Lecture 2: Automatic Differentiation**
 
-[Slides](https://drive.google.com/file/d/15XROZ6VQ4ZsiYpsDWv1jxMSEGCD6J6x9/view?usp=drive_link), [Video lecture](https://youtu.be/R8tktoCW1VI)
+[Slides](https://drive.google.com/file/d/15f9BvkVyV-6b5sWcqEmzOkrDqZZzW2zZ/view?usp=sharing), [Video lecture](https://youtu.be/R8tktoCW1VI)
 
 Suggested Reading:
 
