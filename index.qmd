@@ -47,3 +47,13 @@ Suggested Reading:
 1. Kevin Clark, "Computing Neural Network Gradients" ([link](https://web.stanford.edu/class/cs224n/readings/gradient-notes.pdf)) 
 2. Roger Grosse, "CSC321 Lecture 10: Automatic Differentiation" ([Slides](https://www.cs.toronto.edu/~rgrosse/courses/csc321_2018/slides/lec10.pdf))
 3. Chen, Tianqi, et al. "Training Deep Nets with Sublinear Memory Cost" ([arxiv link](https://arxiv.org/abs/1604.06174))
+
+**Lecture 3: Understanding GPU Bottlenecks for ML**
+
+[Slides](https://drive.google.com/file/d/1jtUkYbQhWPe32-nwlI9ECfCRDUel-s5r/view?usp=drive_link), [Video lecture](https://youtu.be/ee91JdpzigU)
+
+Suggested Reading:
+
+1. Stephen Jones, "How GPU Computing Works", GTC 2021 ([Video](https://youtu.be/3l10o0DYJXg?si=XmGT9VRL9HwjY1us))
+2. Nvidia Docs, "GPU Performance Background User's Guide" ([Link](https://docs.nvidia.com/deeplearning/performance/dl-performance-gpu-background/index.html))
+3. Horace He, "Making Deep Learning Go Brrrr From First Principles" ([Blog post](https://horace.io/brrr_intro.html))
