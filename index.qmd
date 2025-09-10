@@ -18,7 +18,7 @@ The focus of this course is on exploring these systems-related challenges during
 
 [How to Scale Your Model](https://jax-ml.github.io/scaling-book/) by Austin, J., Douglas, S., Frostig, R., Levskaya, A., Chen, C., Vikram, S., Lebron, F., Choy, P., Ramasesh, V., Webson, A., & Pope, R. (2025).  
 
-**Credits**: Part of the content in the lectures is based on material from [csci 1390 at Brown](https://cs.brown.edu/courses/csci1390/), created by Deepti Raghavan, [cs229s at Stanford](https://cs229s.stanford.edu/fall2023/), created by Simran Arora and Azalia Mirhoseini, and [cs 15-442 at CMU](https://catalyst.cs.cmu.edu/15-884-mlsys-sp21/), by Tianqi Chen.  
+**Credits**: Part of the content in the lectures is based on material from [csci 1390 at Brown](https://cs.brown.edu/courses/csci1390/), created by Deepti Raghavan, and [cs 15-442 at CMU](https://catalyst.cs.cmu.edu/15-884-mlsys-sp21/), by Tianqi Chen.  
 
 **Disclaimer**: This being the first offering of this class, please anticipate technical difficulties. This is not an official course webpage from Plaksha University; this is maintained personally by instructor.
 
@@ -35,8 +35,16 @@ The focus of this course is on exploring these systems-related challenges during
 Suggested Reading:
 
 1. Gholami, Amir, et al. "AI and Memory Wall." IEEE Micro Journal ([arxiv link](https://arxiv.org/abs/2403.14123)) 
+
+> This very readable paper presents the interplay between throughput, bandwidth, and end-to-end runtime via a case study on Transformer models.
+   
 2. Kaplan, Jared, et al. "Scaling laws for neural language models." arXiv:2001.08361 (2020) ([arxiv link](https://arxiv.org/abs/2001.08361))
+      
+  > An empirical study quantifying the improvement in LLM performance with model size, training dataset size, and amount of compute. Also known as Kaplan's scaling law.
+
 3. Jacob, Austin, et al. [How to Scale Your Model](https://jax-ml.github.io/scaling-book/) (Part 0: Intro)
+
+  > A useful summary of why study of ML Systems is important.
 
 **Lecture 2: Automatic Differentiation**
 
@@ -45,15 +53,31 @@ Suggested Reading:
 Suggested Reading:
 
 1. Kevin Clark, "Computing Neural Network Gradients" ([link](https://web.stanford.edu/class/cs224n/readings/gradient-notes.pdf)) 
+
+> A concise refresher on analytical gradient computation for neural networks in terms of matrices and vectors.
+
 2. Roger Grosse, "CSC321 Lecture 10: Automatic Differentiation" ([Slides](https://www.cs.toronto.edu/~rgrosse/courses/csc321_2018/slides/lec10.pdf))
+
+> A presentation of automatic differentiation in the context of the Autograd library. It's nice to see how Autograd builds computation graph in a different manner than PyTorch or Needle. 
+
 3. Chen, Tianqi, et al. "Training Deep Nets with Sublinear Memory Cost" ([arxiv link](https://arxiv.org/abs/1604.06174))
+
+> Seminal paper that introduced the idea of gradient checkpointing.
 
 **Lecture 3: Understanding GPU Bottlenecks for ML**
 
-[Slides](https://drive.google.com/file/d/1jtUkYbQhWPe32-nwlI9ECfCRDUel-s5r/view?usp=drive_link), [Video lecture](https://youtu.be/ee91JdpzigU)
+[Slides](https://drive.google.com/file/d/1TRr3Zu9wibIAq7B8lKR0q2QMquexqHFF/view?usp=drive_link), [Video lecture](https://youtu.be/ee91JdpzigU)
 
 Suggested Reading:
 
 1. Stephen Jones, "How GPU Computing Works", GTC 2021 ([Video](https://youtu.be/3l10o0DYJXg?si=XmGT9VRL9HwjY1us))
+   
+> Excellent introduction to principles behind GPU design and CUDA architecture. Specially good is the discussion of co-design of GPU hardware and CUDA. 
+
 2. Nvidia Docs, "GPU Performance Background User's Guide" ([Link](https://docs.nvidia.com/deeplearning/performance/dl-performance-gpu-background/index.html))
+
+> A useful discussion of how different deep learning operations get limited by either compute or memory of GPU. 
+   
 3. Horace He, "Making Deep Learning Go Brrrr From First Principles" ([Blog post](https://horace.io/brrr_intro.html))
+
+> Nice diagrams and figures to compactly illustrate the 3 components where our ML program spends time - compute, memory, and overhead. 

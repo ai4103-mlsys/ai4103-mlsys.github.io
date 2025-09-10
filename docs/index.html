@@ -130,7 +130,7 @@ ul.task-list li input[type="checkbox"] {
 <p>The focus of this course is on exploring these systems-related challenges during training and serving of large language models (LLMs) with special emphasis on Transformer architecture. Topics include GPU architecture and hardware-aware algorithms, ML frameworks and compilers, techniques to parallelize LLMs over multiple GPUs, and reduction of computational complexity and memory footprint.</p>
 <p><strong>Textbook</strong>: The following book can be helpful for parts of the course:</p>
 <p><a href="https://jax-ml.github.io/scaling-book/">How to Scale Your Model</a> by Austin, J., Douglas, S., Frostig, R., Levskaya, A., Chen, C., Vikram, S., Lebron, F., Choy, P., Ramasesh, V., Webson, A., &amp; Pope, R. (2025).</p>
-<p><strong>Credits</strong>: Part of the content in the lectures is based on material from <a href="https://cs.brown.edu/courses/csci1390/">csci 1390 at Brown</a>, created by Deepti Raghavan, <a href="https://cs229s.stanford.edu/fall2023/">cs229s at Stanford</a>, created by Simran Arora and Azalia Mirhoseini, and <a href="https://catalyst.cs.cmu.edu/15-884-mlsys-sp21/">cs 15-442 at CMU</a>, by Tianqi Chen.</p>
+<p><strong>Credits</strong>: Part of the content in the lectures is based on material from <a href="https://cs.brown.edu/courses/csci1390/">csci 1390 at Brown</a>, created by Deepti Raghavan, and <a href="https://catalyst.cs.cmu.edu/15-884-mlsys-sp21/">cs 15-442 at CMU</a>, by Tianqi Chen.</p>
 <p><strong>Disclaimer</strong>: This being the first offering of this class, please anticipate technical difficulties. This is not an official course webpage from Plaksha University; this is maintained personally by instructor.</p>
 <p><strong>Feedback</strong>: If you have found the material useful, or have suggestions on how it can be improved, I will be happy to hear from you. Please email me at pankaj.pansari@plaksha.edu.in</p>
 <hr style="border: 3px solid black;">
@@ -142,25 +142,64 @@ ul.task-list li input[type="checkbox"] {
 <p>Suggested Reading:</p>
 <ol type="1">
 <li>Gholami, Amir, et al.&nbsp;“AI and Memory Wall.” IEEE Micro Journal (<a href="https://arxiv.org/abs/2403.14123">arxiv link</a>)</li>
+</ol>
+<blockquote class="blockquote">
+<p>This very readable paper presents the interplay between throughput, bandwidth, and end-to-end runtime via a case study on Transformer models.</p>
+</blockquote>
+<ol start="2" type="1">
 <li>Kaplan, Jared, et al.&nbsp;“Scaling laws for neural language models.” arXiv:2001.08361 (2020) (<a href="https://arxiv.org/abs/2001.08361">arxiv link</a>)</li>
+</ol>
+<blockquote class="blockquote">
+<p>An empirical study quantifying the improvement in LLM performance with model size, training dataset size, and amount of compute. Also known as Kaplan’s scaling law.</p>
+</blockquote>
+<ol start="3" type="1">
 <li>Jacob, Austin, et al.&nbsp;<a href="https://jax-ml.github.io/scaling-book/">How to Scale Your Model</a> (Part 0: Intro)</li>
 </ol>
+<blockquote class="blockquote">
+<p>A useful summary of why study of ML Systems is important.</p>
+</blockquote>
 <p><strong>Lecture 2: Automatic Differentiation</strong></p>
 <p><a href="https://drive.google.com/file/d/15f9BvkVyV-6b5sWcqEmzOkrDqZZzW2zZ/view?usp=sharing">Slides</a>, <a href="https://youtu.be/R8tktoCW1VI">Video lecture</a></p>
 <p>Suggested Reading:</p>
 <ol type="1">
 <li>Kevin Clark, “Computing Neural Network Gradients” (<a href="https://web.stanford.edu/class/cs224n/readings/gradient-notes.pdf">link</a>)</li>
+</ol>
+<blockquote class="blockquote">
+<p>A concise refresher on analytical gradient computation for neural networks in terms of matrices and vectors.</p>
+</blockquote>
+<ol start="2" type="1">
 <li>Roger Grosse, “CSC321 Lecture 10: Automatic Differentiation” (<a href="https://www.cs.toronto.edu/~rgrosse/courses/csc321_2018/slides/lec10.pdf">Slides</a>)</li>
+</ol>
+<blockquote class="blockquote">
+<p>A presentation of automatic differentiation in the context of the Autograd library. It’s nice to see how Autograd builds computation graph in a different manner than PyTorch or Needle.</p>
+</blockquote>
+<ol start="3" type="1">
 <li>Chen, Tianqi, et al.&nbsp;“Training Deep Nets with Sublinear Memory Cost” (<a href="https://arxiv.org/abs/1604.06174">arxiv link</a>)</li>
 </ol>
+<blockquote class="blockquote">
+<p>Seminal paper that introduced the idea of gradient checkpointing.</p>
+</blockquote>
 <p><strong>Lecture 3: Understanding GPU Bottlenecks for ML</strong></p>
-<p><a href="https://drive.google.com/file/d/1jtUkYbQhWPe32-nwlI9ECfCRDUel-s5r/view?usp=drive_link">Slides</a>, <a href="https://youtu.be/ee91JdpzigU">Video lecture</a></p>
+<p><a href="https://drive.google.com/file/d/1TRr3Zu9wibIAq7B8lKR0q2QMquexqHFF/view?usp=drive_link">Slides</a>, <a href="https://youtu.be/ee91JdpzigU">Video lecture</a></p>
 <p>Suggested Reading:</p>
 <ol type="1">
 <li>Stephen Jones, “How GPU Computing Works”, GTC 2021 (<a href="https://youtu.be/3l10o0DYJXg?si=XmGT9VRL9HwjY1us">Video</a>)</li>
-<li>Nvidia Docs, “GPU Performance Background User’s Guide” (<a href="https://docs.nvidia.com/deeplearning/performance/dl-performance-gpu-background/index.html">Link</a>)</li>
-<li>Horace He, “Making Deep Learning Go Brrrr From First Principles”, (<a href="https://horace.io/brrr_intro.html">Blog post</a>)</li>
 </ol>
+<blockquote class="blockquote">
+<p>Excellent introduction to principles behind GPU design and CUDA architecture. Specially good is the discussion of co-design of GPU hardware and CUDA.</p>
+</blockquote>
+<ol start="2" type="1">
+<li>Nvidia Docs, “GPU Performance Background User’s Guide” (<a href="https://docs.nvidia.com/deeplearning/performance/dl-performance-gpu-background/index.html">Link</a>)</li>
+</ol>
+<blockquote class="blockquote">
+<p>A useful discussion of how different deep learning operations get limited by either compute or memory of GPU.</p>
+</blockquote>
+<ol start="3" type="1">
+<li>Horace He, “Making Deep Learning Go Brrrr From First Principles” (<a href="https://horace.io/brrr_intro.html">Blog post</a>)</li>
+</ol>
+<blockquote class="blockquote">
+<p>Nice diagrams and figures to compactly illustrate the 3 components where our ML program spends time - compute, memory, and overhead.</p>
+</blockquote>
 
 
 </section>
