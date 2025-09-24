@@ -64,6 +64,12 @@ Suggested Reading:
 
 > Seminal paper that introduced the idea of gradient checkpointing.
 
+**Practical 1: Automatic Differentiation Implementation** 
+
+[Video](https://youtu.be/PRQvq-AHokE)
+
+We do a code walkthrough on how reverse-mode automatic differentiation is implemented in a modern ML framework. We choose [Needle](https://github.com/iwzbi/needle), an educational framework with a similar interface as PyTorch, developed at CMU.
+
 **Lecture 3: Understanding GPU Bottlenecks for ML**
 
 [Slides](https://drive.google.com/file/d/1TRr3Zu9wibIAq7B8lKR0q2QMquexqHFF/view?usp=drive_link), [Video lecture](https://youtu.be/ee91JdpzigU)
