@@ -138,7 +138,7 @@ ul.task-list li input[type="checkbox"] {
 <section id="lectures" class="level3">
 <h3 class="anchored" data-anchor-id="lectures">Lectures</h3>
 <p><strong>Lecture 1: Introduction</strong></p>
-<p><a href="https://drive.google.com/file/d/15XROZ6VQ4ZsiYpsDWv1jxMSEGCD6J6x9/view?usp=sharing">Slides</a>, <a href="https://youtu.be/BQgaIufinwc">Video lecture</a></p>
+<p><a href="https://drive.google.com/file/d/15XROZ6VQ4ZsiYpsDWv1jxMSEGCD6J6x9/view?usp=sharing">Slides</a>, <a href="https://youtu.be/TaFBC_U7TOY">Video lecture</a></p>
 <p>Suggested Reading:</p>
 <ol type="1">
 <li>Gholami, Amir, et al.&nbsp;“AI and Memory Wall.” IEEE Micro Journal (<a href="https://arxiv.org/abs/2403.14123">arxiv link</a>)</li>
@@ -159,7 +159,7 @@ ul.task-list li input[type="checkbox"] {
 <p>A useful summary of why study of ML Systems is important.</p>
 </blockquote>
 <p><strong>Lecture 2: Automatic Differentiation</strong></p>
-<p><a href="https://drive.google.com/file/d/15f9BvkVyV-6b5sWcqEmzOkrDqZZzW2zZ/view?usp=sharing">Slides</a>, <a href="https://youtu.be/R8tktoCW1VI">Video lecture</a></p>
+<p><a href="https://drive.google.com/file/d/15f9BvkVyV-6b5sWcqEmzOkrDqZZzW2zZ/view?usp=sharing">Slides</a>, <a href="https://youtu.be/4pI13caAZ0E">Video lecture</a></p>
 <p>Suggested Reading:</p>
 <ol type="1">
 <li>Kevin Clark, “Computing Neural Network Gradients” (<a href="https://web.stanford.edu/class/cs224n/readings/gradient-notes.pdf">link</a>)</li>
@@ -180,10 +180,10 @@ ul.task-list li input[type="checkbox"] {
 <p>Seminal paper that introduced the idea of gradient checkpointing.</p>
 </blockquote>
 <p><strong>Practical 1: Automatic Differentiation Implementation</strong></p>
-<p><a href="https://youtu.be/PRQvq-AHokE">Video</a></p>
+<p><a href="https://youtu.be/kjHdUqdm_aU">Video</a></p>
 <p>We do a code walkthrough on how reverse-mode automatic differentiation is implemented in a modern ML framework. We choose <a href="https://github.com/iwzbi/needle">Needle</a>, an educational framework with a similar interface as PyTorch, developed at CMU.</p>
 <p><strong>Lecture 3: Understanding GPU Bottlenecks for ML</strong></p>
-<p><a href="https://drive.google.com/file/d/1TRr3Zu9wibIAq7B8lKR0q2QMquexqHFF/view?usp=drive_link">Slides</a>, <a href="https://youtu.be/ee91JdpzigU">Video lecture</a></p>
+<p><a href="https://drive.google.com/file/d/1TRr3Zu9wibIAq7B8lKR0q2QMquexqHFF/view?usp=drive_link">Slides</a>, <a href="https://youtu.be/ZFwBQgdE-s4">Video lecture</a></p>
 <p>Suggested Reading:</p>
 <ol type="1">
 <li>Stephen Jones, “How GPU Computing Works”, GTC 2021 (<a href="https://youtu.be/3l10o0DYJXg?si=XmGT9VRL9HwjY1us">Video</a>)</li>
@@ -202,6 +202,27 @@ ul.task-list li input[type="checkbox"] {
 </ol>
 <blockquote class="blockquote">
 <p>Nice diagrams and figures to compactly illustrate the 3 components where our ML program spends time - compute, memory, and overhead.</p>
+</blockquote>
+<p><strong>Lecture 4: GPU Programming Model</strong></p>
+<p><a href="https://drive.google.com/file/d/1FmzTAcrONNt_UIVcOMydtnplx-9r5HpN/view?usp=sharing">Slides</a>, <a href="https://youtu.be/oERajeZtiCk">Video lecture</a></p>
+<p>Suggested Reading:</p>
+<ol type="1">
+<li>Mark Harris, “An Even Easier Introduction to CUDA” (<a href="https://developer.nvidia.com/blog/even-easier-introduction-cuda/">Nvidia Technical Blog post</a>)</li>
+</ol>
+<blockquote class="blockquote">
+<p>Introduces GPU execution model by vector addition example. One useful concept used is Unified Memory - a pool of managed memory shared by GPU and CPU, thereby simplifying memory management for the programmer. Also, Mark introduces a new CUDA programming pattern called <em>grid-stride loop</em>.</p>
+</blockquote>
+<ol start="2" type="1">
+<li>Jeremy Howard, “Getting Started With CUDA for Python Programmers” (<a href="https://youtu.be/nOxKexn3iBo?si=LVgsojMY62Tpr6u9">Video</a>)</li>
+</ol>
+<blockquote class="blockquote">
+<p>Jeremy shows how to call a CUDA kernel from PyTorch using its <code>cpp_extension</code>. He introduces kernels to do RGB to grayscale conversion and matrix multiplication in a more Pythonic way.</p>
+</blockquote>
+<ol start="3" type="1">
+<li>Sasha Rush, “GPU Puzzles” (<a href="https://github.com/srush/GPU-Puzzles">Link</a>)</li>
+</ol>
+<blockquote class="blockquote">
+<p>A nice collection of puzzles to implement CUDA kernels in Python. Uses <a href="https://nvidia.github.io/numba-cuda/index.html">Numba</a> Python JIT Compiler.</p>
 </blockquote>
 
 
