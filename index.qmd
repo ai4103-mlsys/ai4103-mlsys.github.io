@@ -107,3 +107,11 @@ Suggested Reading:
 3. Sasha Rush, "GPU Puzzles" ([Link](https://github.com/srush/GPU-Puzzles))
   
   > A nice collection of puzzles to implement CUDA kernels in Python. Uses [Numba](https://nvidia.github.io/numba-cuda/index.html) Python JIT Compiler.
+  
+**Practical 2: GPU Profiling**
+
+[Video](https://youtu.be/kVk1oc7qjDg)
+
+We run Nvidia Nsight Systems and Nsight Compute profilers on our naive and tiled matrix multiplication examples. 
+We identify the key information to look for when using these tools and see how they're valuable in identifying bottlenecks.
+
