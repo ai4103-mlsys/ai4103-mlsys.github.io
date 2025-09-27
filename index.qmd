@@ -92,6 +92,8 @@ Suggested Reading:
 
 [Slides](https://drive.google.com/file/d/1FmzTAcrONNt_UIVcOMydtnplx-9r5HpN/view?usp=sharing), [Video lecture](https://youtu.be/oERajeZtiCk)
 
+Example code: [Vector addition](https://gist.github.com/pankajpansari/9dfdf751a74c5c72e64095049d60578a), [Simple matrix multiplication](https://gist.github.com/pankajpansari/246e12261c30bb23de4416f88369db70), [Tiled matrix multiplication](https://gist.github.com/pankajpansari/b96de390d5b39caee3399e83b3e9d2af)
+
 Suggested Reading:
 
 1. Mark Harris, "An Even Easier Introduction to CUDA" ([Nvidia Technical Blog post](https://developer.nvidia.com/blog/even-easier-introduction-cuda/))
