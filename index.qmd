@@ -115,3 +115,16 @@ Suggested Reading:
 We run Nvidia Nsight Systems and Nsight Compute profilers on our naive and tiled matrix multiplication examples. 
 We identify the key information to look for when using these tools and see how they're valuable in identifying bottlenecks.
 
+**Lecture 5: Transformer FLOPs Math and Introduction to LLM Inference**
+
+[Slides](https://drive.google.com/file/d/17XLKpJw4Tc2KehAHvVw6ySf1nxsWCJsb/view?usp=sharing), Video lectures: [Transformer Math](https://youtu.be/KN4LW6yEWgg), [LLM Inference](https://youtu.be/IKzaC1nB9xM)
+
+Suggested Reading:
+
+1. Einops tutorial ([Link](https://einops.rocks/)), Einsum tutorial ([Link](https://obilaniu6266h16.wordpress.com/2016/02/04/einstein-summation-in-numpy/))
+   
+ > Einsum is a notation to concisely express complex tensor operations like multiplication and summation. Einops is a library to reshape and manipulate tensors such as rearranging axes and reducing dimensions. One doesn't have to remember all the different PyTorch functions for tensor manipulations if using einsum and einops.
+   
+2. Niels Rogge, "How a Transformer works at inference vs training time"  ([Video](https://youtu.be/IGu7ivuy1Ag?si=udyR8r1Y0YwVkhwi))
+
+3. Jacob, Austin, et al. [How to Scale Your Model](https://jax-ml.github.io/scaling-book/) (Part 4: Transformers, Part 7: Inference)
