@@ -1,1 +1,16 @@
 /* css styles */
+
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600;700&display=swap');
+
+body {
+  font-family: 'Source Sans 3', sans-serif;
+  color: #555555;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #444444;
+}
+
+p, li {
+  color: #606060;
+}

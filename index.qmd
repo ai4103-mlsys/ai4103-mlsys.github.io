@@ -28,41 +28,13 @@ The focus of this course is on exploring these systems-related challenges during
 
 ### Lectures
 
-**Lecture 1: Introduction**
+**Topic 1: Introduction**
 
 [Slides](https://drive.google.com/file/d/15XROZ6VQ4ZsiYpsDWv1jxMSEGCD6J6x9/view?usp=sharing), [Video lecture](https://youtu.be/TaFBC_U7TOY)
 
-Suggested Reading:
-
-1. Gholami, Amir, et al. "AI and Memory Wall." IEEE Micro Journal ([arxiv link](https://arxiv.org/abs/2403.14123)) 
-
-> This very readable paper presents the interplay between throughput, bandwidth, and end-to-end runtime via a case study on Transformer models.
-   
-2. Kaplan, Jared, et al. "Scaling laws for neural language models." arXiv:2001.08361 (2020) ([arxiv link](https://arxiv.org/abs/2001.08361))
-      
-  > An empirical study quantifying the improvement in LLM performance with model size, training dataset size, and amount of compute. Also known as Kaplan's scaling law.
-
-3. Jacob, Austin, et al. [How to Scale Your Model](https://jax-ml.github.io/scaling-book/) (Part 0: Intro)
-
-  > A useful summary of why study of ML Systems is important.
-
-**Lecture 2: Automatic Differentiation**
+**Topic 2: Automatic Differentiation**
 
 [Slides](https://drive.google.com/file/d/15f9BvkVyV-6b5sWcqEmzOkrDqZZzW2zZ/view?usp=sharing), [Video lecture](https://youtu.be/4pI13caAZ0E)
-
-Suggested Reading:
-
-1. Kevin Clark, "Computing Neural Network Gradients" ([link](https://web.stanford.edu/class/cs224n/readings/gradient-notes.pdf)) 
-
-> A concise refresher on analytical gradient computation for neural networks in terms of matrices and vectors.
-
-2. Roger Grosse, "CSC321 Lecture 10: Automatic Differentiation" ([Slides](https://www.cs.toronto.edu/~rgrosse/courses/csc321_2018/slides/lec10.pdf))
-
-> A presentation of automatic differentiation in the context of the Autograd library. It's nice to see how Autograd builds computation graph in a different manner than PyTorch or Needle. 
-
-3. Chen, Tianqi, et al. "Training Deep Nets with Sublinear Memory Cost" ([arxiv link](https://arxiv.org/abs/1604.06174))
-
-> Seminal paper that introduced the idea of gradient checkpointing.
 
 **Practical 1: Automatic Differentiation Implementation** 
 
@@ -70,44 +42,16 @@ Suggested Reading:
 
 We do a code walkthrough on how reverse-mode automatic differentiation is implemented in a modern ML framework. We choose [Needle](https://github.com/iwzbi/needle), an educational framework with a similar interface as PyTorch, developed at CMU.
 
-**Lecture 3: Understanding GPU Bottlenecks for ML**
+**Topic 3: Understanding GPU Bottlenecks for ML**
 
 [Slides](https://drive.google.com/file/d/1TRr3Zu9wibIAq7B8lKR0q2QMquexqHFF/view?usp=drive_link), [Video lecture](https://youtu.be/ZFwBQgdE-s4)
 
-Suggested Reading:
-
-1. Stephen Jones, "How GPU Computing Works", GTC 2021 ([Video](https://youtu.be/3l10o0DYJXg?si=XmGT9VRL9HwjY1us))
-   
-> Excellent introduction to principles behind GPU design and CUDA architecture. Specially good is the discussion of co-design of GPU hardware and CUDA. 
-
-2. Nvidia Docs, "GPU Performance Background User's Guide" ([Link](https://docs.nvidia.com/deeplearning/performance/dl-performance-gpu-background/index.html))
-
-> A useful discussion of how different deep learning operations get limited by either compute or memory of GPU. 
-   
-3. Horace He, "Making Deep Learning Go Brrrr From First Principles" ([Blog post](https://horace.io/brrr_intro.html))
-
-> Nice diagrams and figures to compactly illustrate the 3 components where our ML program spends time - compute, memory, and overhead. 
-
-**Lecture 4: GPU Programming Model**
+**Topic 4: GPU Programming Model**
 
 [Slides](https://drive.google.com/file/d/1FmzTAcrONNt_UIVcOMydtnplx-9r5HpN/view?usp=sharing), [Video lecture](https://youtu.be/oERajeZtiCk)
 
 Example code: [Vector addition](https://gist.github.com/pankajpansari/9dfdf751a74c5c72e64095049d60578a), [Simple matrix multiplication](https://gist.github.com/pankajpansari/246e12261c30bb23de4416f88369db70), [Tiled matrix multiplication](https://gist.github.com/pankajpansari/b96de390d5b39caee3399e83b3e9d2af)
 
-Suggested Reading:
-
-1. Mark Harris, "An Even Easier Introduction to CUDA" ([Nvidia Technical Blog post](https://developer.nvidia.com/blog/even-easier-introduction-cuda/))
-   
- > Introduces GPU execution model by vector addition example. One useful concept used is Unified Memory - a pool of managed memory shared by GPU and CPU, thereby simplifying memory management for the programmer. Also, Mark introduces a new CUDA programming pattern called *grid-stride loop*. 
-   
-2. Jeremy Howard, "Getting Started With CUDA for Python Programmers"  ([Video](https://youtu.be/nOxKexn3iBo?si=LVgsojMY62Tpr6u9))
-   
- > Jeremy shows how to call a CUDA kernel from PyTorch using its `cpp_extension`. He introduces kernels to do RGB to grayscale conversion and matrix multiplication in a more Pythonic way. 
-   
-3. Sasha Rush, "GPU Puzzles" ([Link](https://github.com/srush/GPU-Puzzles))
-  
-  > A nice collection of puzzles to implement CUDA kernels in Python. Uses [Numba](https://nvidia.github.io/numba-cuda/index.html) Python JIT Compiler.
-  
 **Practical 2: GPU Profiling**
 
 [Video](https://youtu.be/kVk1oc7qjDg)
@@ -115,16 +59,12 @@ Suggested Reading:
 We run Nvidia Nsight Systems and Nsight Compute profilers on our naive and tiled matrix multiplication examples. 
 We identify the key information to look for when using these tools and see how they're valuable in identifying bottlenecks.
 
-**Lecture 5: Transformer FLOPs Math and Introduction to LLM Inference**
+**Topic 5: Transformer FLOPs Math**
 
-[Slides](https://drive.google.com/file/d/17XLKpJw4Tc2KehAHvVw6ySf1nxsWCJsb/view?usp=sharing), Video lectures: [Transformer Math](https://youtu.be/KN4LW6yEWgg), [LLM Inference](https://youtu.be/IKzaC1nB9xM)
+[Slides](https://drive.google.com/file/d/17XLKpJw4Tc2KehAHvVw6ySf1nxsWCJsb/view?usp=sharing), [Video lecture](https://youtu.be/KN4LW6yEWgg)
 
-Suggested Reading:
+**Topic 6: Introduction to LLM Inference**
 
-1. Einops tutorial ([Link](https://einops.rocks/)), Einsum tutorial ([Link](https://obilaniu6266h16.wordpress.com/2016/02/04/einstein-summation-in-numpy/))
-   
- > Einsum is a notation to concisely express complex tensor operations like multiplication and summation. Einops is a library to reshape and manipulate tensors such as rearranging axes and reducing dimensions. One doesn't have to remember all the different PyTorch functions for tensor manipulations if using einsum and einops.
-   
-2. Niels Rogge, "How a Transformer works at inference vs training time"  ([Video](https://youtu.be/IGu7ivuy1Ag?si=udyR8r1Y0YwVkhwi))
+[Slides](https://drive.google.com/file/d/17XLKpJw4Tc2KehAHvVw6ySf1nxsWCJsb/view?usp=sharing), [Video lecture](https://youtu.be/IKzaC1nB9xM)
 
-3. Jacob, Austin, et al. [How to Scale Your Model](https://jax-ml.github.io/scaling-book/) (Part 4: Transformers, Part 7: Inference)
+**Note**: The remaining lectures will be uploaded shortly.
