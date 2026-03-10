@@ -11,7 +11,9 @@ format:
 
 website:
   title: "AI4103: ML Systems"
+  site-url: https://ai4103-mlsys.github.io/
   navbar:
+    background: dark 
     left:
       - href: index.qmd
         text: Home
