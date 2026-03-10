@@ -1,9 +1,12 @@
 project:
   type: website
+  output-dir: docs
 
 format:
   html:
-    theme: litera
+    theme: lumen
+    mainfont: "Source Sans Pro, sans-serif"
+    fontsize: 1rem
     css: styles.css
 
 website:

@@ -2,15 +2,34 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600;700&display=swap');
 
+/* Soften body text to dark gray instead of black */
 body {
-  font-family: 'Source Sans 3', sans-serif;
-  color: #555555;
+  color: #4a4a4a;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  color: #444444;
+/* Lighten and reduce heading weight */
+h1, h2, h3 {
+  font-weight: 600;      /* instead of default 700/bold */
+  color: #333333;
 }
 
-p, li {
-  color: #606060;
+/* Specifically tame the title */
+.title {
+  font-size: 2rem;       /* pull it down from the default ~2.5rem */
+  font-weight: 600;
+}
+
+/* Softer description/section headings */
+h2 {
+  font-size: 1.4rem;
+}
+
+.navbar {
+  background-color: #ffffff !important;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.navbar .navbar-brand,
+.navbar .nav-link {
+  color: #333333 !important;
 }
