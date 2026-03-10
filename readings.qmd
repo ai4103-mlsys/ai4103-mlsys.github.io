@@ -1,0 +1,67 @@
+**Topic 1: Introduction**
+
+1. Gholami, Amir, et al. "AI and Memory Wall." IEEE Micro Journal ([arxiv link](https://arxiv.org/abs/2403.14123)) 
+
+> This very readable paper presents the interplay between throughput, bandwidth, and end-to-end runtime via a case study on Transformer models.
+   
+2. Kaplan, Jared, et al. "Scaling laws for neural language models." arXiv:2001.08361 (2020) ([arxiv link](https://arxiv.org/abs/2001.08361))
+      
+> An empirical study quantifying the improvement in LLM performance with model size, training dataset size, and amount of compute. Also known as Kaplan's scaling law.
+
+3. Jacob, Austin, et al. [How to Scale Your Model](https://jax-ml.github.io/scaling-book/) (Part 0: Intro)
+
+> A useful summary of why study of ML Systems is important.
+
+**Topic 2: Automatic Differentiation**
+
+1. Kevin Clark, "Computing Neural Network Gradients" ([link](https://web.stanford.edu/class/cs224n/readings/gradient-notes.pdf)) 
+
+> A concise refresher on analytical gradient computation for neural networks in terms of matrices and vectors.
+
+2. Roger Grosse, "CSC321 Lecture 10: Automatic Differentiation" ([Slides](https://www.cs.toronto.edu/~rgrosse/courses/csc321_2018/slides/lec10.pdf))
+
+> A presentation of automatic differentiation in the context of the Autograd library. It's nice to see how Autograd builds computation graph in a different manner than PyTorch or Needle. 
+
+3. Chen, Tianqi, et al. "Training Deep Nets with Sublinear Memory Cost" ([arxiv link](https://arxiv.org/abs/1604.06174))
+
+> Seminal paper that introduced the idea of gradient checkpointing.
+
+**Topic 3: Understanding GPU Bottlenecks for ML**
+
+1. Stephen Jones, "How GPU Computing Works", GTC 2021 ([Video](https://youtu.be/3l10o0DYJXg?si=XmGT9VRL9HwjY1us))
+   
+> Excellent introduction to principles behind GPU design and CUDA architecture. Specially good is the discussion of co-design of GPU hardware and CUDA. 
+
+2. Nvidia Docs, "GPU Performance Background User's Guide" ([Link](https://docs.nvidia.com/deeplearning/performance/dl-performance-gpu-background/index.html))
+
+> A useful discussion of how different deep learning operations get limited by either compute or memory of GPU. 
+   
+3. Horace He, "Making Deep Learning Go Brrrr From First Principles" ([Blog post](https://horace.io/brrr_intro.html))
+
+> Nice diagrams and figures to compactly illustrate the 3 components where our ML program spends time - compute, memory, and overhead. 
+
+**Topic 4: GPU Programming Model**
+
+1. Mark Harris, "An Even Easier Introduction to CUDA" ([Nvidia Technical Blog post](https://developer.nvidia.com/blog/even-easier-introduction-cuda/))
+   
+> Introduces GPU execution model by vector addition example. One useful concept used is Unified Memory - a pool of managed memory shared by GPU and CPU, thereby simplifying memory management for the programmer. Also, Mark introduces a new CUDA programming pattern called *grid-stride loop*. 
+   
+2. Jeremy Howard, "Getting Started With CUDA for Python Programmers"  ([Video](https://youtu.be/nOxKexn3iBo?si=LVgsojMY62Tpr6u9))
+   
+> Jeremy shows how to call a CUDA kernel from PyTorch using its `cpp_extension`. He introduces kernels to do RGB to grayscale conversion and matrix multiplication in a more Pythonic way. 
+   
+3. Sasha Rush, "GPU Puzzles" ([Link](https://github.com/srush/GPU-Puzzles))
+  
+> A nice collection of puzzles to implement CUDA kernels in Python. Uses [Numba](https://nvidia.github.io/numba-cuda/index.html) Python JIT Compiler.
+
+**Topic 5: Transformer FLOPs Math**
+
+1. Einops tutorial ([Link](https://einops.rocks/)), Einsum tutorial ([Link](https://obilaniu6266h16.wordpress.com/2016/02/04/einstein-summation-in-numpy/))
+   
+> Einsum is a notation to concisely express complex tensor operations like multiplication and summation. Einops is a library to reshape and manipulate tensors such as rearranging axes and reducing dimensions. One doesn't have to remember all the different PyTorch functions for tensor manipulations if using einsum and einops.
+   
+**Topic 6: Introduction to LLM Inference**
+
+1. Niels Rogge, "How a Transformer works at inference vs training time"  ([Video](https://youtu.be/IGu7ivuy1Ag?si=udyR8r1Y0YwVkhwi))
+
+2. Jacob, Austin, et al. [How to Scale Your Model](https://jax-ml.github.io/scaling-book/) (Part 4: Transformers, Part 7: Inference)

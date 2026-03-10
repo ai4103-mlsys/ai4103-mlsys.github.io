@@ -1,0 +1,16 @@
+project:
+  type: website
+
+format:
+  html:
+    theme: litera
+    css: styles.css
+
+website:
+  title: "AI4103: ML Systems"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - href: readings.qmd
+        text: Readings
